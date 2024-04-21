@@ -1,0 +1,24 @@
+
+.email-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Or specify a height as needed */
+}
+
+.center-form-field {
+    width: 100%;      /* Adjust the width if needed */
+    max-width: 570px; /* Set an even larger maximum width */
+}
+
+.password-field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Or specify a height as needed */
+}
+
+/* .mat-icon {
+    font-family: 'Material Icons', sans-serif;
+} */
+

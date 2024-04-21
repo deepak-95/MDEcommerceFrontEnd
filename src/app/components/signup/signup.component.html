@@ -1,0 +1,137 @@
+<!-- Section: Design Block -->
+<section class="text-center">
+    <!-- Background image -->
+    <div class="p-5 bg-image" style="
+          background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+          height: 300px;
+          "></div>
+    <!-- Background image -->
+
+    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+          margin-top: -100px;
+          background: hsla(0, 0%, 100%, 0.8);
+          backdrop-filter: blur(30px);
+          ">
+        <div class="card-body py-5 px-md-5">
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-5">Sign up now</h2>
+                    <form [formGroup]="signUpForm">
+                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 mb-4">
+                                <mat-form-field class="full-width" appearance="outline" style="width: 98%;">
+                                    <mat-label>First name</mat-label>
+                                    <input matInput type="text" formControlName="firstName" value=""
+                                        autocomplete="off" />
+                                    <mat-error
+                                        *ngIf="signUpForm.get('firstName')?.touched && !signUpForm.get('firstName')?.valid">
+                                        First name is required*
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <mat-form-field class="full-width" appearance="outline" style="width: 98%;">
+                                    <mat-label>Last name</mat-label>
+                                    <input matInput type="text" formControlName="lastName" value=""
+                                        autocomplete="off" />
+                                    <mat-error
+                                        *ngIf="signUpForm.get('lastName')?.touched && !signUpForm.get('lastName')?.valid">
+                                        Last name is required*
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <!-- Email input -->
+
+                        <div class="email-field">
+                            <mat-form-field class="center-form-field" appearance="outline">
+                                <mat-label>Email address</mat-label>
+                                <input matInput type="text" formControlName="emailAddress" value=""
+                                    autocomplete="off" />
+                                <mat-error
+                                    *ngIf="signUpForm.get('emailAddress')?.touched && !signUpForm.get('emailAddress')?.valid">
+                                    Email address is required*
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <!-- Password input -->
+                        <div class="password-field">
+                            <mat-form-field class="center-form-field" appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input matInput type="text" formControlName="passWord" value="" autocomplete="off" />
+                                <mat-error
+                                    *ngIf="signUpForm.get('passWord')?.touched && !signUpForm.get('passWord')?.valid">
+                                    Password is required*
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div>
+                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                            <label class="form-check-label" for="form2Example33">
+                                Subscribe to our newsletter
+                            </label>
+                        </div>
+                        <br>
+                        <!-- Submit button -->
+                        <button mat-raised-button color="primary" type="submit" class="mat-button mb-4"
+                            style="width: 50%;">
+                            Sign up
+                        </button>
+
+
+
+
+                        <!-- Register buttons -->
+                        <!-- <div class="text-center">
+                            <p>or sign up with:</p>
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-google"></i>
+                            </button>
+
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-github"></i>
+                            </button>
+                        </div> -->
+
+
+
+
+
+
+                        <!-- <div class="text-center">
+                            <p>or sign up with:</p>
+
+                            <mat-icon>facebook</mat-icon>
+                            <i class="bi bi-star-fill"></i>
+                          
+                          
+                        
+                        </div> -->
+
+                        
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section: Design Block -->

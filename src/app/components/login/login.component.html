@@ -1,0 +1,66 @@
+<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+            <div class="col-md-8 col-lg-7 col-xl-6">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                    class="img-fluid" alt="Phone image">
+            </div>
+            <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                <form [formGroup]="logInForm">
+                    <!-- Email input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <mat-form-field class="full-width" appearance="outline" style="width: 98%;">
+                            <mat-label>Email address</mat-label>
+                            <input matInput type="text" formControlName="emailId" value="" autocomplete="off" />
+                            <mat-error *ngIf="logInForm.get('emailId')?.touched && !logInForm.get('emailId')?.valid">
+                                Email Id is required*
+                            </mat-error>
+
+                        </mat-form-field>
+
+                    </div>
+
+                    <!-- Password input -->
+
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <mat-form-field class="full-width" appearance="outline" style="width: 98%;">
+                            <mat-label>Password</mat-label>
+                            <input matInput type="text" formControlName="passWord" value="" autocomplete="off" />
+                            <mat-error *ngIf="logInForm.get('passWord')?.touched && !logInForm.get('passWord')?.valid">
+                                Password is required*
+                            </mat-error>
+                        </mat-form-field>
+
+                    </div>
+                    <div class="d-flex justify-content-around align-items-center mb-4">
+                        <!-- Checkbox -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                            <label class="form-check-label" for="form1Example3"> Remember me </label>
+                        </div>
+                        <a href="#!">Forgot password?</a>
+                    </div>
+
+                    <!-- Submit button -->
+
+                    <button type="submit" data-mdb-button-init data-mdb-ripple-init
+                        class="btn btn-primary btn-lg btn-block">Log in</button>
+                    <p class="mt-3 text-center">New to MDEcommerce? <a href="#" routerLink="/signup">Create an Account</a></p>
+                    <div class="divider d-flex align-items-center my-4">
+                        <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+                    </div>
+
+                    <a data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg btn-block"
+                        style="background-color: #3b5998" href="#!" role="button">
+                        <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
+                    </a>
+                    <a data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg btn-block"
+                        style="background-color: #55acee" href="#!" role="button">
+                        <i class="fab fa-twitter me-2"></i>Continue with Twitter</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
